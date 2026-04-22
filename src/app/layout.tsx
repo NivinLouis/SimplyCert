@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import {
+  defaultDescription,
+  defaultOgImage,
+  defaultTitle,
+  siteName,
+  siteUrl,
+} from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SimplyCert – Free Bulk Certificate Generator | Upload Your Design, Add Names from CSV",
-  description:
-    "Generate personalized e-certificates in bulk for free. Upload your own certificate design, paste a name list or upload CSV, mark the text position, and download individual PDFs. No signup. No data upload. 100% private.",
+  metadataBase: new URL(siteUrl),
+  title: defaultTitle,
+  description: defaultDescription,
   keywords: [
     "bulk certificate generator",
     "certificate generator from CSV",
@@ -28,6 +35,34 @@ export const metadata: Metadata = {
     "bulk certificate generator client side",
     "canva alternative for bulk certificates",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName,
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [
+      {
+        url: defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: "SimplyCert batch certificate generator landing page",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [defaultOgImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

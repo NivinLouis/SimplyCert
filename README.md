@@ -6,6 +6,10 @@
 
 Generate personalized e-certificates in bulk for free. Upload your own certificate design, paste a name list or upload CSV, mark the text position, and download individual PDFs. No signup. No data upload. 100% private.
 
+### 🌐 Live Demo
+- **Vercel**: [simplycert.vercel.app](https://simplycert.vercel.app)
+- **Netlify**: [simplycert.netlify.app](https://simplycert.netlify.app)
+
 ---
 
 ## 🚀 The workflow takes under two minutes:
