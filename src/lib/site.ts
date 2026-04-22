@@ -5,11 +5,25 @@ export const siteUrl = rawSiteUrl?.length
   : 'http://localhost:3000';
 
 export const siteName = 'SimplyCert';
+export const authorName = 'Nivin P Louis';
+export const authorGithub = 'https://github.com/NivinLouis';
+export const authorLinkedIn = 'https://www.linkedin.com/in/nivin-louis/';
+export const authorEmail = 'nivinlouis123@gmail.com';
+export const authorDescription =
+  'B.Tech AIML Student at Vidya Academy of Science and Technology. Vibe Coder who builds apps that make life easy.';
+export const authorKeywords = [
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Web Apps',
+  'React',
+  'Next.js',
+  'Vibe Coding',
+];
 
 export const defaultTitle =
-  'SimplyCert – Free Bulk Certificate Generator | Upload Your Design, Add Names from CSV';
+  'SimplyCert – Batch Certificate Generator | Nivin P Louis';
 
 export const defaultDescription =
-  'Generate personalized e-certificates in bulk for free. Upload your own certificate design, paste a name list or upload CSV, mark the text position, and download individual PDFs. No signup. No data upload. 100% private.';
+  'SimplyCert by Nivin P Louis is a free batch certificate generator that lets you upload your own certificate design, add names from CSV, position text visually, and export personalized PDFs privately in your browser.';
 
 export const defaultOgImage = '/hero.png';

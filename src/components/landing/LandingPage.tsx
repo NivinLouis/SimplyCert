@@ -3,6 +3,12 @@
 import AppHeader from '@/components/branding/AppHeader';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+  authorDescription,
+  authorGithub,
+  authorLinkedIn,
+  authorName,
+} from '@/lib/site';
 import { useCertStore } from '@/store/useCertStore';
 import {
   ArrowRight,
@@ -64,6 +70,12 @@ const schema = {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
+  },
+  author: {
+    '@type': 'Person',
+    name: authorName,
+    sameAs: [authorGithub, authorLinkedIn],
+    description: authorDescription,
   },
   description:
     'Free browser-based bulk certificate generator that lets you upload your own design, add names from CSV, draw the text area, and export personalized PDF certificates.',
@@ -295,7 +307,7 @@ export default function LandingPage() {
 
           <section className="flex justify-center">
             <div className="rounded-full border border-border/60 bg-card/70 px-5 py-3 text-center text-sm text-muted-foreground backdrop-blur-sm">
-              Developed by <span className="font-semibold text-foreground">Nivin P Louis</span> from{' '}
+              Developed by <span className="font-semibold text-foreground">{authorName}</span> from{' '}
               <span className="font-semibold text-foreground">Vidya Academy of Science and Technology</span>
             </div>
           </section>

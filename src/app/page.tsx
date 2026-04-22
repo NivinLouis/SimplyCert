@@ -1,5 +1,6 @@
 'use client';
 
+import AppFooter from '@/components/branding/AppFooter';
 import { useCertStore } from '@/store/useCertStore';
 import Stepper from '@/components/wizard/Stepper';
 import Step1Upload from '@/components/steps/Step1Upload';
@@ -40,12 +41,7 @@ export default function Home() {
           {currentStep === 4 && <Step4Preview />}
         </main>
 
-        {/* Footer */}
-        {currentStep !== 3 && currentStep !== 4 && (
-          <footer className="text-center py-3 text-xs text-muted-foreground border-t border-border/30">
-            <p>SimplyCert — Free bulk certificate generator. Works in your browser with no data uploaded.</p>
-          </footer>
-        )}
+        <AppFooter />
       </div>
     </>
   );

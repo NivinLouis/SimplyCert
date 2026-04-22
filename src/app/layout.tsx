@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import {
+  authorDescription,
+  authorEmail,
+  authorGithub,
+  authorKeywords,
+  authorLinkedIn,
+  authorName,
   defaultDescription,
   defaultOgImage,
   defaultTitle,
@@ -34,7 +40,14 @@ export const metadata: Metadata = {
     "certificate generator no account required",
     "bulk certificate generator client side",
     "canva alternative for bulk certificates",
+    ...authorKeywords,
   ],
+  authors: [{ name: authorName, url: authorGithub }],
+  creator: authorName,
+  publisher: authorName,
+  applicationName: siteName,
+  category: 'productivity',
+  referrer: 'origin-when-cross-origin',
   alternates: {
     canonical: "/",
   },
@@ -44,6 +57,7 @@ export const metadata: Metadata = {
     siteName,
     title: defaultTitle,
     description: defaultDescription,
+    emails: [authorEmail],
     images: [
       {
         url: defaultOgImage,
@@ -58,10 +72,18 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: defaultDescription,
     images: [defaultOgImage],
+    creator: '@NivinLouis',
   },
   robots: {
     index: true,
     follow: true,
+  },
+  other: {
+    author: authorName,
+    'contact:email': authorEmail,
+    'profile:github': authorGithub,
+    'profile:linkedin': authorLinkedIn,
+    'description:author': authorDescription,
   },
 };
 
