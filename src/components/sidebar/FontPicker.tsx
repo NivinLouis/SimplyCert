@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { GOOGLE_FONTS, preloadFontPreviews, loadFont } from '@/lib/fontLoader';
 import { useCertStore } from '@/store/useCertStore';
 import { toast } from 'sonner';
@@ -37,18 +37,16 @@ export default function FontPicker() {
 
   return (
     <Popover open={isOpen} onOpenChange={setIsOpen}>
-      <PopoverTrigger asChild>
-        <button
-          className={cn(
-            'w-full px-3 py-2.5 rounded-lg border border-border/50 text-left text-sm',
-            'bg-background hover:bg-muted/50 transition-all duration-200',
-            'focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-500/50'
-          )}
-        >
-          <span style={{ fontFamily: `"${textConfig.fontFamily}", sans-serif` }}>
-            {textConfig.fontFamily}
-          </span>
-        </button>
+      <PopoverTrigger
+        className={cn(
+          'w-full px-3 py-2.5 rounded-lg border border-border/50 text-left text-sm',
+          'bg-background hover:bg-muted/50 transition-all duration-200',
+          'focus:outline-none focus:ring-2 focus:ring-violet-500/30 focus:border-violet-500/50'
+        )}
+      >
+        <span style={{ fontFamily: `"${textConfig.fontFamily}", sans-serif` }}>
+          {textConfig.fontFamily}
+        </span>
       </PopoverTrigger>
 
       <PopoverContent className="w-[280px] p-0 rounded-xl border border-border/50 shadow-xl shadow-black/10" align="start">

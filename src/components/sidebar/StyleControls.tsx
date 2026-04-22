@@ -252,12 +252,11 @@ export default function StyleControls() {
       <CollapsibleSection icon={<Palette className="w-4 h-4" />} title="Color">
           <Popover open={showColorPicker} onOpenChange={setShowColorPicker}>
             <div className="flex items-center gap-2">
-              <PopoverTrigger asChild>
-                <button
-                  className="w-8 h-8 rounded-lg border border-border/50 shrink-0 shadow-sm transition-transform hover:scale-105"
-                  style={{ backgroundColor: textConfig.color }}
-                />
-              </PopoverTrigger>
+              <PopoverTrigger
+                className="w-8 h-8 rounded-lg border border-border/50 shrink-0 shadow-sm transition-transform hover:scale-105"
+                style={{ backgroundColor: textConfig.color }}
+                aria-label="Open color picker"
+              />
               <Input
                 value={textConfig.color}
                 onChange={(e) => setTextConfig({ color: e.target.value })}
